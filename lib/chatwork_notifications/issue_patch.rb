@@ -13,7 +13,7 @@ module ChatworkNotifications
     def notify_chatwork_after_create
       if Helpers.active? and Setting.plugin_redmine_chatwork_notifications[:issue_notify_on_create] and not self.is_private?
         description = Helpers.truncate_words self, :description
-        url = Helpers.issue_url(self)
+        url = "#{Setting[:protocol]}://#{Setting[:host_name]}/issues/#{self.id}"
 
         title = l("chatwork.issue_created_notify_title", id: self.id, url: url, title: self.subject, user: self.author.name)
         description = l("chatwork.issue_created_notify_description", comment: description) if description

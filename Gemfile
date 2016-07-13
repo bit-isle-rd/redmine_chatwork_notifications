@@ -1,4 +1,4 @@
 
-gem 'nokogiri'
-gem 'webmock', group: :test
+gem "nokogiri", ">= 1.6.7.2"
+#gem 'webmock'
 
