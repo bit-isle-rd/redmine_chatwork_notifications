@@ -1,7 +1,7 @@
 ---
 production:
-  api_token: "TODO: please set chatowrk api token"
+  api_token: "df7ea346755d56199eb7f2668f7492da"
 
 development:
-  api_token: "TODO: please set chatowrk api token"
+  api_token: "df7ea346755d56199eb7f2668f7492da"
 

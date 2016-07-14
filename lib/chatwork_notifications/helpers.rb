@@ -7,7 +7,7 @@ module ChatworkNotifications
       # Returns chatwork notifications settings.
       def options
         @options ||= begin
-          conf_file = File.join(Rails.root, 'config', 'chatwork.yml')
+          conf_file = File.join(Rails.root, 'plugins/redmine_chatwork_notifications/config', 'chatwork.yml')
           options = YAML::load(File.open(conf_file)) rescue {}
 
           (options[Rails.env] || {}).with_indifferent_access.freeze
